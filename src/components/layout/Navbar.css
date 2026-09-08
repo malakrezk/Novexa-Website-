@@ -15,6 +15,7 @@
 }
 
 .navbar__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,13 +48,19 @@
 
 .navbar__nav {
   flex: 1;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-7);
 }
 
 .navbar__links,
 .navbar__actions {
   gap: var(--space-6);
+}
+
+.navbar__links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar__links a,
@@ -142,6 +149,7 @@
 
   .navbar__links,
   .navbar__actions {
+    position: static;
     align-items: stretch;
     flex-direction: column;
     gap: var(--space-4);

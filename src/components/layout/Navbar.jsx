@@ -51,8 +51,7 @@ export default function Navbar() {
             ))}
           </div>
           <div className="navbar__actions">
-            <a href="#contact" onClick={closeMenu}>Contact</a>
-            <Button type="button" onClick={closeMenu}>Start a Project</Button>
+            <Button type="button" onClick={closeMenu}>Contact Us</Button>
           </div>
         </nav>
       </Container>
