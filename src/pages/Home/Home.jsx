@@ -47,44 +47,29 @@ function IntroTrust() {
 }
 
 function HeroVisual() {
-  return <div className="hero-visual" aria-label="Novexa digital core connecting web, mobile, AI, data, and cloud systems">
-      <div className="hero-visual__halo" />
-      <div className="hero-visual__grid" />
-      <div className="hero-visual__topline">
-        <span><i /> N-OS / LIVE SYSTEM</span>
-        <span>09.24.06 <b>●</b></span>
+  return (
+    <div className="hero-visual hero-visual--simple" aria-label="Novexa digital core connecting software, AI, and data">
+      <div className="hero-simple__halo" />
+      <div className="hero-simple__core">
+        <div className="hero-simple__header">
+          <span>NX / DIGITAL SYSTEM</span>
+          <small>01—05</small>
+        </div>
+        <div className="hero-simple__identity">
+          <strong>NOVEXA</strong>
+          <b>Digital Core</b>
+        </div>
+        <div className="hero-simple__footer">
+          <span>STRATEGY</span>
+          <span>DESIGN</span>
+          <span>TECHNOLOGY</span>
+        </div>
+        <div className="hero-simple__orbit" aria-hidden="true" />
       </div>
-      <div className="hero-visual__core">
-        <div className="hero-visual__core-ring hero-visual__core-ring--outer" />
-        <div className="hero-visual__core-ring hero-visual__core-ring--inner" />
-        <span className="hero-visual__core-eyebrow">NOVEXA / 001</span>
-        <strong>CORE</strong>
-        <span className="hero-visual__core-caption">INTELLIGENT SYSTEMS</span>
-        <div className="hero-visual__core-orbit" aria-hidden="true" />
-      </div>
-      <div className="hero-visual__orbit-label hero-visual__orbit-label--web"><i />WEB</div>
-      <div className="hero-visual__orbit-label hero-visual__orbit-label--mobile"><i />MOBILE</div>
-      <div className="hero-visual__orbit-label hero-visual__orbit-label--ai"><i />AI</div>
-      <div className="hero-visual__orbit-label hero-visual__orbit-label--data"><i />DATA</div>
-      <div className="hero-visual__orbit-label hero-visual__orbit-label--cloud"><i />CLOUD</div>
-      <div className="hero-visual__card hero-visual__card--automation">
-        <span className="hero-visual__card-label"><i /> AI AUTOMATION</span>
-        <strong>Workflow active</strong>
-        <b>+32% <small>efficiency</small></b>
-        <div className="hero-visual__progress"><i /></div>
-      </div>
-      <div className="hero-visual__card hero-visual__card--analytics">
-        <span className="hero-visual__card-label"><i /> DATA ANALYTICS</span>
-        <strong>Performance <b>↗</b></strong>
-        <div className="hero-visual__mini-chart" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
-      </div>
-      <div className="hero-visual__telemetry">
-        <span>THROUGHPUT</span><b>84.6%</b><i><em /></i>
-        <span>ACTIVE NODES</span><b>05 / 05</b><i><em /></i>
-      </div>
-      <div className="hero-visual__connector hero-visual__connector--top" />
-      <div className="hero-visual__connector hero-visual__connector--bottom" />
-    </div>;
+      <div className="hero-simple__signal hero-simple__signal--top"><i /> AI / ACTIVE</div>
+      <div className="hero-simple__signal hero-simple__signal--bottom">DATA <b>↗</b></div>
+    </div>
+  );
 }
 
 export default function Home() {
