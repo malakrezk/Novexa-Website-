@@ -1,0 +1,47 @@
+:root {
+  --color-ink: #080d18;
+  --color-ink-soft: #101a2b;
+  --color-surface: #f4f7f8;
+  --color-surface-raised: #ffffff;
+  --color-text: #f5f8fa;
+  --color-text-muted: #9eabbc;
+  --color-text-dark: #172235;
+  --color-accent: #70e1d0;
+  --color-accent-strong: #2fc8b2;
+  --color-highlight: #d5f36d;
+  --color-line: rgba(222, 235, 241, 0.14);
+  --color-focus: #d5f36d;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+
+  --font-display: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-body: 'Segoe UI', Tahoma, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-body: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(2.75rem, 8vw, 6.75rem);
+  --leading-tight: 0.96;
+  --leading-body: 1.6;
+
+  --shadow-soft: 0 1.5rem 4rem rgba(1, 8, 18, 0.2);
+  --shadow-glow: 0 0 3rem rgba(112, 225, 208, 0.12);
+
+  --transition-fast: 160ms ease;
+  --transition-base: 240ms ease;
+  --transition-slow: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
