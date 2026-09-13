@@ -1,17 +1,24 @@
 import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Button from '../ui/Button';
 import Container from './Container';
 import './Navbar.css';
 
-const navigation = ['Home', 'Services', 'Solutions', 'Work', 'About'];
+const navigation = [
+  { label: 'Home',      href: '/#home' },
+  { label: 'Services',  href: '/#services' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Work',      href: '/#work' },
+  { label: 'About',     href: '/#about' },
+];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
-
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -22,9 +29,9 @@ export default function Navbar() {
   return (
     <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
       <Container className="navbar__inner">
-        <a className="navbar__wordmark" href="#home" aria-label="Novexa home" onClick={closeMenu}>
+        <Link className="navbar__wordmark" to="/" aria-label="Novexa home" onClick={closeMenu}>
           NOVEXA
-        </a>
+        </Link>
 
         <button
           className="navbar__toggle"
@@ -44,11 +51,22 @@ export default function Navbar() {
           aria-label="Primary navigation"
         >
           <div className="navbar__links">
-            {navigation.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} onClick={closeMenu}>
-                {item}
-              </a>
-            ))}
+            {navigation.map((item) =>
+              item.to ? (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className={location.pathname === item.to ? 'navbar__link--active' : ''}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a key={item.label} href={item.href} onClick={closeMenu}>
+                  {item.label}
+                </a>
+              )
+            )}
           </div>
           <div className="navbar__actions">
             <Button type="button" onClick={closeMenu}>Contact Us</Button>
