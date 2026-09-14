@@ -6,7 +6,7 @@ import './Navbar.css';
 
 const navigation = [
   { label: 'Home',      href: '/#home' },
-  { label: 'Services',  href: '/#services' },
+  { label: 'Services',  to: '/services' },
   { label: 'Solutions', to: '/solutions' },
   { label: 'Work',      href: '/#work' },
   { label: 'About',     to: '/about' },
