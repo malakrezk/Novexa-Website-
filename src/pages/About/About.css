@@ -350,6 +350,19 @@
     width: min(100%, 42rem);
     margin: 0 auto;
   }
+
+  .about__mission-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .about__expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__stats {
+    gap: var(--space-6);
+  }
 }
 
 @media (max-width: 600px) {
@@ -368,5 +381,18 @@
 
   .about-visual__signal {
     font-size: 0.55rem;
+  }
+
+  .about__expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .about__mission-card {
+    padding: var(--space-6);
   }
 }
