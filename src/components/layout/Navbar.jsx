@@ -9,7 +9,7 @@ const navigation = [
   { label: 'Services',  href: '/#services' },
   { label: 'Solutions', to: '/solutions' },
   { label: 'Work',      href: '/#work' },
-  { label: 'About',     href: '/#about' },
+  { label: 'About',     to: '/about' },
 ];
 
 export default function Navbar() {
