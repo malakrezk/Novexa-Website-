@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../components/layout/Container';
 import Section from '../../components/layout/Section';
 import Button from '../../components/ui/Button';
@@ -56,7 +57,7 @@ export default function Work() {
             </div>
           </div>
 
-          <div
+          <nav
             className="work__filters"
             aria-label="Project categories"
           >
@@ -68,12 +69,13 @@ export default function Work() {
                   activeCategory === category ? 'primary' : 'outline'
                 }
                 className="work__filter"
+                aria-pressed={activeCategory === category}
                 onClick={() => setActiveCategory(category)}
               >
                 {category}
               </Button>
             ))}
-          </div>
+          </nav>
         </Container>
       </Section>
 
@@ -111,13 +113,10 @@ export default function Work() {
                   ))}
                 </div>
 
-                <button
-                  className="work-project__link"
-                  type="button"
-                >
-                  View project
+                <Link className="work-project__link" to="/#contact">
+                  Discuss project
                   <span>↗</span>
-                </button>
+                </Link>
               </div>
             </article>
           )}
@@ -149,13 +148,10 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <button
-                    className="work-project__link"
-                    type="button"
-                  >
-                    View project
+                  <Link className="work-project__link" to="/#contact">
+                    Discuss project
                     <span>↗</span>
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -173,7 +169,7 @@ export default function Work() {
               <span> meaningful.</span>
             </h2>
 
-            <Button variant="primary">
+            <Button as={Link} to="/#contact" variant="primary">
               Start a project
               <span>↗</span>
             </Button>

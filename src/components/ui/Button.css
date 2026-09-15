@@ -1,24 +1,56 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   min-height: 3.25rem;
-  padding: 0.75rem 1.25rem;
-  border: 0;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid transparent;
   border-radius: var(--radius-pill);
   cursor: pointer;
+  font-family: var(--font-body);
   font-size: var(--text-sm);
-  font-weight: 700;
-  transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-fast);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: background-color var(--transition-base), border-color var(--transition-base),
+    color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+}
+
+.button__arrow {
+  display: inline-block;
+  font-size: 1.05em;
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+
+.button:hover .button__arrow {
+  transform: translate(0.15rem, -0.1rem);
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.15rem);
 }
 
 .button--primary {
-  color: var(--color-ink);
+  color: var(--color-accent-ink);
   background: var(--color-accent);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 0.75rem 2rem rgba(108, 124, 255, 0.24);
 }
 
 .button--primary:hover {
-  background: var(--color-highlight);
+  background: var(--color-accent-soft);
+  box-shadow: 0 1rem 2.5rem rgba(108, 124, 255, 0.32);
 }
+
+.button--outline {
+  color: var(--color-text);
+  border-color: var(--color-line);
+  background: rgba(247, 248, 250, 0.03);
+}
+
+.button--outline:hover {
+  border-color: var(--color-accent);
+  background: rgba(108, 124, 255, 0.08);
+}
+

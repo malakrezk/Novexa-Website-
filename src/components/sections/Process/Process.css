@@ -1,0 +1,120 @@
+.process {
+  padding: clamp(6rem, 11vw, 10rem) 0;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.process__eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.process__headline {
+  margin: clamp(1.5rem, 3vw, 2rem) 0 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.process__list {
+  max-width: 42rem;
+  margin: clamp(4rem, 8vw, 6rem) 0 0 auto;
+}
+
+.process__row {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--space-6);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 600ms var(--transition-slow), transform 600ms var(--transition-slow);
+  transition-delay: var(--row-delay, 0ms);
+}
+
+.process--visible .process__row {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process__marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process__marker span {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  background: var(--color-surface);
+}
+
+.process__marker i {
+  flex: 1;
+  width: 1px;
+  min-height: 2.5rem;
+  margin: 0.4rem 0;
+  background: var(--color-line);
+}
+
+.process__copy {
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.process__copy h3 {
+  margin: 0.55rem 0 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.process__copy p {
+  max-width: 28rem;
+  margin: var(--space-3) 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process__row {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .process__list {
+    margin-top: 3.5rem;
+  }
+
+  .process__row {
+    grid-template-columns: 2.5rem 1fr;
+    gap: var(--space-4);
+  }
+
+  .process__marker span {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.65rem;
+  }
+}
