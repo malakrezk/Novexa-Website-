@@ -8,11 +8,12 @@ const navigation = [
   { label: 'Home',      href: '/#home' },
   { label: 'Services',  to: '/services' },
   { label: 'Solutions', to: '/solutions' },
-  { label: 'Work',      href: '/#work' },
+  { label: 'Work',      to: '/work' },
   { label: 'About',     to: '/about' },
 ];
 
 export default function Navbar() {
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
