@@ -202,9 +202,9 @@ function SolutionCard({ label, title, desc, tags, outcomes, delay }) {
         <div className="sol-card__tags" aria-label="Technologies">
           {tags.map((t) => <span key={t} className="sol-card__tag">{t}</span>)}
         </div>
-        <button type="button" className="sol-card__cta">
+        <span className="sol-card__cta">
           Discuss this <span aria-hidden="true">→</span>
-        </button>
+        </span>
       </div>
     </article>
   );

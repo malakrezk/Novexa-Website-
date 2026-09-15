@@ -111,13 +111,10 @@ export default function Work() {
                   ))}
                 </div>
 
-                <button
-                  className="work-project__link"
-                  type="button"
-                >
+                <span className="work-project__link">
                   View project
                   <span>↗</span>
-                </button>
+                </span>
               </div>
             </article>
           )}
@@ -149,13 +146,10 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <button
-                    className="work-project__link"
-                    type="button"
-                  >
+                  <span className="work-project__link">
                     View project
                     <span>↗</span>
-                  </button>
+                  </span>
                 </div>
               </article>
             ))}
