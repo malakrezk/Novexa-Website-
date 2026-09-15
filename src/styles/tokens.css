@@ -1,17 +1,29 @@
 :root {
-  --color-ink: #080d18;
-  --color-ink-soft: #101a2b;
-  --color-surface: #f4f7f8;
-  --color-surface-raised: #ffffff;
-  --color-text: #f5f8fa;
-  --color-text-muted: #9eabbc;
-  --color-text-dark: #172235;
-  --color-accent: #70e1d0;
-  --color-accent-strong: #2fc8b2;
-  --color-highlight: #d5f36d;
-  --color-line: rgba(222, 235, 241, 0.14);
-  --color-focus: #d5f36d;
+  /* surfaces */
+  --color-bg: #0b0d12;
+  --color-surface: #121722;
+  --color-surface-raised: #161c29;
+  --color-surface-light: #f4f6f8;
+  --color-surface-light-raised: #ffffff;
 
+  /* text */
+  --color-text: #f7f8fa;
+  --color-text-on-light: #0b0d12;
+  --color-muted: #98a2b3;
+  --color-muted-on-light: #5b6472;
+
+  /* accent */
+  --color-accent: #6c7cff;
+  --color-accent-soft: #8068ff;
+  --color-accent-ink: #0b0d12;
+
+  /* lines */
+  --color-line: rgba(247, 248, 250, 0.1);
+  --color-line-soft: rgba(247, 248, 250, 0.06);
+  --color-line-on-light: rgba(11, 13, 18, 0.12);
+  --color-line-on-light-soft: rgba(11, 13, 18, 0.07);
+
+  /* spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -23,25 +35,32 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
+  /* radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
   --radius-pill: 999px;
 
-  --font-display: 'Trebuchet MS', 'Segoe UI', sans-serif;
-  --font-body: 'Segoe UI', Tahoma, sans-serif;
+  /* type */
+  --font-display: 'Manrope', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-body: 1rem;
-  --text-lg: 1.25rem;
-  --text-xl: clamp(2.75rem, 8vw, 6.75rem);
-  --leading-tight: 0.96;
-  --leading-body: 1.6;
+  --text-lg: 1.15rem;
+  --leading-tight: 1.02;
+  --leading-body: 1.65;
 
-  --shadow-soft: 0 1.5rem 4rem rgba(1, 8, 18, 0.2);
-  --shadow-glow: 0 0 3rem rgba(112, 225, 208, 0.12);
+  /* effects */
+  --shadow-soft: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  --shadow-lifted: 0 2rem 5rem rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 3rem rgba(108, 124, 255, 0.18);
 
+  /* motion */
   --transition-fast: 160ms ease;
-  --transition-base: 240ms ease;
-  --transition-slow: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-base: 260ms ease;
+  --transition-slow: 500ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  --container-width: 80rem;
+  --color-focus: var(--color-accent);
 }
