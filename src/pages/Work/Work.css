@@ -159,7 +159,8 @@
     box-shadow var(--transition-base);
 }
 
-.work-project:hover {
+.work-project:hover,
+.work-project:focus-within {
   border-color: rgba(112, 225, 208, 0.4);
 
   transform: translateY(-0.4rem);
@@ -417,7 +418,8 @@
   transition: transform var(--transition-fast);
 }
 
-.work-project__link:hover span {
+.work-project__link:hover span,
+.work-project__link:focus-visible span {
   transform: translate(0.2rem, -0.2rem);
 }
 
@@ -562,4 +564,3 @@
     transition: none;
   }
 }
-

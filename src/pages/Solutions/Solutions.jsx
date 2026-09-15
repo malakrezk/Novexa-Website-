@@ -191,7 +191,7 @@ function SolutionCard({ label, title, desc, tags, outcomes, delay }) {
           {outcomes.map((o) => (
             <li key={o} className="sol-card__outcome">
               <svg className="sol-card__outcome-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
-                <polyline points="1.5,6.5 4.5,9.5 10.5,2.5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                <polyline points="1.5,6.5 4.5,9.5 10.5,2.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {o}
             </li>

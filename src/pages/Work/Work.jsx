@@ -68,6 +68,7 @@ export default function Work() {
                   activeCategory === category ? 'primary' : 'outline'
                 }
                 className="work__filter"
+                aria-pressed={activeCategory === category}
                 onClick={() => setActiveCategory(category)}
               >
                 {category}
