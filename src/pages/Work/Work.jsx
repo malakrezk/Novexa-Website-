@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../components/layout/Container';
 import Section from '../../components/layout/Section';
 import Button from '../../components/ui/Button';
@@ -112,10 +113,10 @@ export default function Work() {
                   ))}
                 </div>
 
-                <a className="work-project__link" href="/#contact">
+                <Link className="work-project__link" to="/#contact">
                   Discuss project
                   <span>↗</span>
-                </a>
+                </Link>
               </div>
             </article>
           )}
@@ -147,10 +148,10 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <a className="work-project__link" href="/#contact">
+                  <Link className="work-project__link" to="/#contact">
                     Discuss project
                     <span>↗</span>
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -168,7 +169,7 @@ export default function Work() {
               <span> meaningful.</span>
             </h2>
 
-            <Button as="a" href="/#contact" variant="primary">
+            <Button as={Link} to="/#contact" variant="primary">
               Start a project
               <span>↗</span>
             </Button>
