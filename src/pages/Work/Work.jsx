@@ -56,7 +56,7 @@ export default function Work() {
             </div>
           </div>
 
-          <div
+          <nav
             className="work__filters"
             aria-label="Project categories"
           >
@@ -73,7 +73,7 @@ export default function Work() {
                 {category}
               </Button>
             ))}
-          </div>
+          </nav>
         </Container>
       </Section>
 
@@ -111,10 +111,10 @@ export default function Work() {
                   ))}
                 </div>
 
-                <span className="work-project__link">
-                  View project
+                <a className="work-project__link" href="/#contact">
+                  Discuss project
                   <span>↗</span>
-                </span>
+                </a>
               </div>
             </article>
           )}
@@ -146,10 +146,10 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <span className="work-project__link">
-                    View project
+                  <a className="work-project__link" href="/#contact">
+                    Discuss project
                     <span>↗</span>
-                  </span>
+                  </a>
                 </div>
               </article>
             ))}
