@@ -167,7 +167,7 @@ export default function Work() {
               <span> meaningful.</span>
             </h2>
 
-            <Button variant="primary">
+            <Button as="a" href="/#contact" variant="primary">
               Start a project
               <span>↗</span>
             </Button>
