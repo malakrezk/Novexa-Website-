@@ -78,11 +78,20 @@
   transition: transform var(--transition-base);
 }
 
-.navbar__links a:hover {
+
+.navbar__links a:hover,
+.navbar__actions a:hover,
+.navbar__links a.navbar__link--active {
   color: var(--color-text);
 }
 
-.navbar__links a:hover::after {
+.navbar__links a.navbar__link--active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar__links a:hover::after,
+.navbar__actions a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
