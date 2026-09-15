@@ -12,6 +12,11 @@ const solutions = [
     title: 'Performant web apps built for scale.',
     desc: 'From marketing sites to complex SaaS platforms — fast, accessible, production-grade applications with modern frameworks and clean architecture.',
     tags: ['React', 'Next.js', 'TypeScript', 'Node.js'],
+    outcomes: [
+      'Production-ready site in 6–10 weeks',
+      'Design system your team can extend',
+      'Core Web Vitals optimized from day one',
+    ],
   },
   {
     id: 'mobile',
@@ -19,6 +24,11 @@ const solutions = [
     title: 'iOS & Android, native where it counts.',
     desc: 'Cross-platform where it makes sense, native where it matters. Mobile experiences that users actually return to.',
     tags: ['React Native', 'Swift', 'Kotlin'],
+    outcomes: [
+      'App Store & Play Store-ready builds',
+      'Offline-capable with local data sync',
+      'Analytics and crash reporting wired in',
+    ],
   },
   {
     id: 'ai',
@@ -26,6 +36,11 @@ const solutions = [
     title: 'Intelligent workflows that learn.',
     desc: 'LLM integrations to custom ML pipelines. We embed intelligence where it creates the most leverage in your operations.',
     tags: ['LLMs', 'Pipelines', 'Agents', 'APIs'],
+    outcomes: [
+      'Custom LLM integration with your data',
+      'Automated workflows saving measurable hours/week',
+      'Human-in-the-loop controls and full audit trails',
+    ],
   },
   {
     id: 'data',
@@ -33,6 +48,11 @@ const solutions = [
     title: 'Raw data turned into real decisions.',
     desc: 'Real-time dashboards, ETL pipelines, and predictive models that give leadership the signal — not the noise.',
     tags: ['Analytics', 'ETL', 'SQL', 'Dashboards'],
+    outcomes: [
+      'Executive dashboard live within 4 weeks',
+      'Cleaned, reliable data pipeline you own',
+      'Anomaly detection and threshold alerts',
+    ],
   },
   {
     id: 'ux',
@@ -40,6 +60,11 @@ const solutions = [
     title: 'Interfaces that feel inevitable.',
     desc: 'Research-led design that bridges business goals with user needs. Systems built to scale across your entire product surface.',
     tags: ['Research', 'Figma', 'Design Systems'],
+    outcomes: [
+      'Validated user insights from real research',
+      'Full Figma design system with component library',
+      'Developer-ready specs your team will actually use',
+    ],
   },
   {
     id: 'cloud',
@@ -47,6 +72,11 @@ const solutions = [
     title: 'The foundation everything runs on.',
     desc: 'Scalable, observable infrastructure — serverless, containers, or hybrid. Architected for what you actually need.',
     tags: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+    outcomes: [
+      'Zero-downtime deployment pipeline',
+      'Cost-optimized infra with usage dashboards',
+      'Incident alerts and runbook documentation',
+    ],
   },
 ];
 
@@ -135,7 +165,7 @@ function IntroOverview() {
   );
 }
 
-function SolutionCard({ label, title, desc, tags, delay }) {
+function SolutionCard({ label, title, desc, tags, outcomes, delay }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -156,8 +186,25 @@ function SolutionCard({ label, title, desc, tags, delay }) {
       <p className="sol-card__label">{label}</p>
       <h3 className="sol-card__title">{title}</h3>
       <p className="sol-card__desc">{desc}</p>
-      <div className="sol-card__tags" aria-label="Technologies">
-        {tags.map((t) => <span key={t} className="sol-card__tag">{t}</span>)}
+      {outcomes && (
+        <ul className="sol-card__outcomes" aria-label="What you get">
+          {outcomes.map((o) => (
+            <li key={o} className="sol-card__outcome">
+              <svg className="sol-card__outcome-icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                <polyline points="1.5,6.5 4.5,9.5 10.5,2.5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {o}
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="sol-card__footer">
+        <div className="sol-card__tags" aria-label="Technologies">
+          {tags.map((t) => <span key={t} className="sol-card__tag">{t}</span>)}
+        </div>
+        <button type="button" className="sol-card__cta">
+          Discuss this <span aria-hidden="true">→</span>
+        </button>
       </div>
     </article>
   );

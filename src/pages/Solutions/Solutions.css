@@ -392,7 +392,7 @@
 .sol-overview__item       { color: #788595; }
 
 .sol-overview--visible .sol-overview__eyebrow,
-.sol-overview--visible .sol-overview h2,
+.sol-overview--visible h2,
 .sol-overview--visible .sol-overview__body,
 .sol-overview--visible .sol-overview__rail {
   opacity: 1;
@@ -493,11 +493,56 @@
   line-height: var(--leading-body);
 }
 
+/* ── Outcomes list ──────────────────────────────────────────────── */
+.sol-card__outcomes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-line);
+}
+
+.sol-card__outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  transition: color var(--transition-fast);
+}
+
+.sol-card:hover .sol-card__outcome {
+  color: var(--color-text);
+}
+
+.sol-card__outcome-icon {
+  flex-shrink: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.15rem;
+  fill: none;
+  stroke: var(--color-accent);
+  transition: stroke var(--transition-fast);
+}
+
+/* ── Card footer (tags + CTA) ───────────────────────────────────── */
+.sol-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
 .sol-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-top: auto;
 }
 
 .sol-card__tag {
@@ -514,6 +559,39 @@
 .sol-card:hover .sol-card__tag {
   border-color: rgba(112, 225, 208, 0.28);
   color: var(--color-accent);
+}
+
+.sol-card__cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.85rem;
+  border: 1px solid rgba(112, 225, 208, 0.28);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.sol-card__cta:hover {
+  background: rgba(112, 225, 208, 0.1);
+  border-color: var(--color-accent);
+  color: var(--color-highlight);
+  transform: translateX(0.1rem);
+}
+
+.sol-card__cta:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 /* ── Process ─────────────────────────────────────────────────────── */
