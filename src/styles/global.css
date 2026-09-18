@@ -2,10 +2,11 @@
 
 :root {
   color: var(--color-text);
-  background: var(--color-ink);
+  background: var(--color-bg);
   font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -14,22 +15,24 @@
 
 html {
   min-width: 320px;
-  background: var(--color-ink);
+  background: var(--color-bg);
+  scroll-behavior: smooth;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
 }
 
 button,
 a {
   color: inherit;
-}
-
-button,
-a {
   font: inherit;
 }
 
@@ -37,7 +40,27 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

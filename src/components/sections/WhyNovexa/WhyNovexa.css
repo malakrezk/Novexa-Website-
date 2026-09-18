@@ -1,0 +1,114 @@
+.why {
+  padding: clamp(6rem, 11vw, 10rem) 0;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.why__eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.why__headline {
+  margin: clamp(1.5rem, 3vw, 2rem) 0 clamp(3.5rem, 7vw, 6rem);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.why__list {
+  border-top: 1px solid var(--color-line);
+}
+
+.why__row {
+  display: grid;
+  grid-template-columns: minmax(6rem, 0.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-6);
+  padding: clamp(2rem, 4vw, 3rem) 0;
+  border-bottom: 1px solid var(--color-line);
+  transition: transform var(--transition-base);
+}
+
+.why__row:hover {
+  transform: translateX(0.35rem);
+}
+
+.why__number {
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  -webkit-text-stroke: 1px rgba(247, 248, 250, 0.28);
+}
+
+.why__row:hover .why__number {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+.why__copy h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.why__copy p {
+  max-width: 34rem;
+  margin: var(--space-3) 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.why__row--alt {
+  grid-template-columns: minmax(0, 1fr) minmax(6rem, 0.35fr);
+}
+
+.why__row--alt .why__number {
+  order: 2;
+  text-align: right;
+}
+
+.why__row--alt .why__copy {
+  text-align: right;
+}
+
+.why__row--alt .why__copy p {
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .why__row,
+  .why__row--alt {
+    grid-template-columns: 4.5rem 1fr;
+  }
+
+  .why__row--alt .why__number {
+    order: 0;
+    text-align: left;
+  }
+
+  .why__row--alt .why__copy {
+    text-align: left;
+  }
+
+  .why__row--alt .why__copy p {
+    margin-left: 0;
+  }
+
+  .why__number {
+    font-size: 2.5rem;
+  }
+}

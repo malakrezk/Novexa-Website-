@@ -1,0 +1,10 @@
+.section {
+  width: 100%;
+  scroll-margin-top: 4.75rem;
+}
+
+@media (max-width: 860px) {
+  .section {
+    scroll-margin-top: 4.25rem;
+  }
+}
