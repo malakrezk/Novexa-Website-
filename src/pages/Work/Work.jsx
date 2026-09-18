@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useMemo, useState } from 'react';
 import Container from '../../components/layout/Container';
 import Section from '../../components/layout/Section';
@@ -111,13 +112,13 @@ export default function Work() {
                   ))}
                 </div>
 
-                <button
+                <Link
                   className="work-project__link"
-                  type="button"
+                  to={`/work/${featuredProject.id}`}
                 >
                   View project
                   <span>↗</span>
-                </button>
+                </Link>
               </div>
             </article>
           )}
@@ -149,13 +150,13 @@ export default function Work() {
                     ))}
                   </div>
 
-                  <button
+                  <Link
                     className="work-project__link"
-                    type="button"
+                    to={`/work/${project.id}`}
                   >
                     View project
                     <span>↗</span>
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
